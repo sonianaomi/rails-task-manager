@@ -1,0 +1,8 @@
+<h1><%= @task.description %></h1>
+<p><%= @task.created_at %></p>
+
+<ul class="bottom-links">
+  <li> <%= link_to 'View all', tasks_path %> </li>
+  <li> <%= link_to 'Edit', edit_task_path(@task.id) %> </li>
+  <li> <%= link_to 'Delete', task_path(@task), method: :delete, data: { confirm: "Are you sure?" } %> </li>
+</ul>
